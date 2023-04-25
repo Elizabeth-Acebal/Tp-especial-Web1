@@ -1,0 +1,38 @@
+header{
+    background-color: black;
+    height: 50px;
+    border-bottom: solid 5px  #D4C26A;
+}
+.menu {
+    display: flex;
+} 
+.item{
+    color: white;
+    font-size: 20px;
+    margin: 7px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+.item:hover{
+    opacity: 0.6;
+    background: #D4C26A;
+}
+footer{
+    background-color: black;
+    height: 50px;
+    border-top: solid 5px  #D4C26A;
+}
+.contenedor-redes{
+    display: flex;
+}
+.redes li{
+    display: flex;
+    list-style: none;
+
+}
+li a{
+    color: #D4C26A;
+    padding: 7px;
+    list-style: none;
+}
