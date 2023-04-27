@@ -1,5 +1,4 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,9 +8,57 @@
     display: flex;
     background-color: black;
     height: 50px;
-    border-bottom: solid 5px  #D4C26A;
-} 
-.item{
+    border-bottom: solid 5px #D4C26A;
+}
+
+/*------------------------------*/
+h1 {
+    text-align: center;
+    font-family: system-ui;
+    font-size: 30px;
+    padding: 10px;
+}
+.container-banner {
+    background-color: #D4C26A;;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 100px;
+    justify-content: left;
+    align-items: center;
+    margin: 20px;
+}
+
+.container-banner ul {
+    font-family: system-ui;
+    font-size: 50px;
+    list-style: none;
+}
+
+.container-cards{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+}
+
+.container-cards p{
+    font-family: system-ui;
+}
+ .ubicacion, .medios-de-pago, .envios {
+    background-color: #D4C26A;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    height: 100px;
+    padding: 40px;
+    width: 20%;
+}
+
+
+
+.item {
     color: white;
     font-size: 20px;
     margin: 7px;
@@ -19,24 +66,27 @@
     text-align: center;
     text-decoration: none;
 }
-.item:hover{
+
+.item:hover {
     opacity: 0.6;
     background: #D4C26A;
 }
-footer{
+
+footer {
     display: flex;
     background-color: black;
     height: 50px;
-    border-top: solid 5px  #D4C26A;    
+    border-top: solid 5px #D4C26A;
 }
-.redes{
+
+.redes {
     display: flex;
     margin: 10px;
     list-style: none;
 }
 
-.social-icon{
-color: #D4C26A;
-margin: 5px;
-padding: 5px;
+.social-icon {
+    color: #D4C26A;
+    margin: 5px;
+    padding: 5px;
 }
