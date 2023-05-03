@@ -69,6 +69,7 @@ label, p{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .container-form-titulo{
