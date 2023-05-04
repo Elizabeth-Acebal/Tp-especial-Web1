@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap'); 
+
 * {
     margin: 0;
     padding: 0;
@@ -14,8 +16,9 @@
 /*------------------------------*/
 h1 {
     text-align: center;
-    font-family: system-ui;
-    font-size: 30px;
+    font-family: 'Dancing Script', cursiva;
+    font-size: 50px;
+    color: #D4C26A;
     padding: 10px;
 }
 
@@ -63,6 +66,33 @@ label, p{
 }
 
 
+
+.item {
+    color: white;
+    font-size: 20px;
+    margin: 7px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.item:hover {
+    opacity: 0.6;
+    background: #D4C26A;
+}
+
+.redes {
+    display: flex;
+    margin: 10px;
+    list-style: none;
+}
+
+.social-icon {
+    color: #D4C26A;
+    margin: 5px;
+    padding: 5px;
+}
+
 /*-----------FORM------------*/
 
 .container-form {
@@ -106,37 +136,3 @@ button {
 }
 
 /*-----------FORM------------*/
-
-
-.item {
-    color: white;
-    font-size: 20px;
-    margin: 7px;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-}
-
-.item:hover {
-    opacity: 0.6;
-    background: #D4C26A;
-}
-
-footer {
-    display: flex;
-    background-color: black;
-    height: 50px;
-    border-top: solid 5px #D4C26A;
-}
-
-.redes {
-    display: flex;
-    margin: 10px;
-    list-style: none;
-}
-
-.social-icon {
-    color: #D4C26A;
-    margin: 5px;
-    padding: 5px;
-}
