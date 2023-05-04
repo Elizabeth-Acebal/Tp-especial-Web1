@@ -21,9 +21,8 @@ h1 {
     color: #D4C26A;
     padding: 10px;
 }
-
 .container-banner {
-    background-color: #D4C26A;
+    background-color: #D4C26A;;
     display: flex;
     flex-direction: row-reverse;
     gap: 100px;
@@ -38,22 +37,17 @@ h1 {
     list-style: none;
 }
 
-.container-cards {
+.container-cards{
     display: flex;
     justify-content: center;
     gap: 40px;
     padding: 20px;
 }
 
-.container-cards p,
-label, p{
-    /*PREGUNTAR SI ES BUENA PRACTICA LABEL-FORM*/
+.container-cards p{
     font-family: system-ui;
 }
-
-.ubicacion,
-.medios-de-pago,
-.envios {
+ .ubicacion, .medios-de-pago, .envios {
     background-color: #D4C26A;
     cursor: pointer;
     display: flex;
@@ -64,8 +58,64 @@ label, p{
     padding: 40px;
     width: 20%;
 }
+/*-----------productos-----------*/
 
+.productos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.prod{
+    display: flex;
+    align-items: center;
+    list-style: none; 
+    padding: 20px;
+}
 
+.img-prod {
+    height: 500px;
+    width: 660px;
+    border-radius: 10px;
+    filter: drop-shadow(9px 9px 9px #D4C26A);
+    transition: all 500ms ease;
+}
+
+.img-prod:hover{
+    transform: scale(1.1);
+}
+#btn-dormitorio, #btn-cortinas, #btn-muebles, #btn-deco{
+    height: 35px;
+    width: 150px;
+    position: absolute;
+    border-radius: 5px ;
+    border: 3px solid #D4C26A;
+    font-size: 20px;
+    color: #D4C26A;
+    background: rgba(255, 255, 2555, 0.8);
+}
+
+#btn-dormitorio, #btn-muebles{ 
+    right: 68%; 
+}
+#btn-dormitorio ,#btn-cortinas{
+    top:50%;
+}
+#btn-cortinas, #btn-deco{
+    right: 20%;
+}
+#btn-muebles,#btn-deco{
+    top: 120%;
+}
+
+/*-----------productos-----------*/
+
+footer {
+    display: flex;
+    background-color: black;
+    height: 50px;
+    border-top: solid 5px #D4C26A;
+}
 
 .item {
     color: white;
