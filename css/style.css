@@ -71,6 +71,7 @@ h1 {
     align-items: center;
     list-style: none; 
     padding: 20px;
+    position: relative;
 }
 
 .img-prod {
@@ -88,6 +89,8 @@ h1 {
     height: 35px;
     width: 150px;
     position: absolute;
+    right: 40%; 
+    top:50%;
     border-radius: 5px ;
     border: 3px solid #D4C26A;
     font-size: 20px;
@@ -95,18 +98,6 @@ h1 {
     background: rgba(255, 255, 2555, 0.8);
 }
 
-#btn-dormitorio, #btn-muebles{ 
-    right: 68%; 
-}
-#btn-dormitorio ,#btn-cortinas{
-    top:50%;
-}
-#btn-cortinas, #btn-deco{
-    right: 20%;
-}
-#btn-muebles,#btn-deco{
-    top: 120%;
-}
 
 /*-----------productos-----------*/
 
@@ -134,6 +125,7 @@ footer {
 .redes {
     display: flex;
     margin: 10px;
+    margin-left: 1030px;
     list-style: none;
 }
 
