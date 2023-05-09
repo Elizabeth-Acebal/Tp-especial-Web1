@@ -14,7 +14,7 @@
 }
 
 /*------------------------------*/
-h1 {
+h1,h2 {
     text-align: center;
     font-family: 'Dancing Script', cursiva;
     font-size: 50px;
@@ -101,6 +101,51 @@ h1 {
 
 /*-----------productos-----------*/
 
+/*-----------carrito de compras-----------*/
+h2{
+    font-size: 40px;
+}  
+.container-tabla{
+    display: flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    padding:5px;
+    
+}
+.tabla-prod,td,tr{
+	width: 800px;
+	border:3px solid #0902021f;
+	/*border-collapse: collapse;*/
+	text-align: center;
+	font-family: 'Noto Serif', serif;	
+}
+thead{
+    gap:20px;
+}
+.img-prod-tabla{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    padding: 5px;
+    
+}
+
+#btn-comprar:hover, #btn-eliminar:hover{
+    background-color: #D4C26A;
+    color: black;
+}
+
+
+#btn-eliminar, #btn-comprar{
+    background-color: black;
+    border-radius: 5px;
+    color:#D4C26A; 
+    padding: 10px; 
+}
+
+
+/*-----------carrito de compras-----------*/
+
 footer {
     display: flex;
     background-color: black;
@@ -131,6 +176,7 @@ footer {
 
 .social-icon {
     color: #D4C26A;
+    font-size: 25px;
     margin: 5px;
     padding: 5px;
 }
@@ -167,14 +213,13 @@ input, textarea {
     box-sizing: border-box;
 }
 
-button {
+.btn-enviar {
     background-color: #000;
     border: none;
     color: white;
     cursor: pointer;
     font-size: 16px;
-    padding: 15px 32px;
-   
+    padding: 15px 32px;   
 }
 
 /*-----------FORM------------*/
