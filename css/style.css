@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 
 * {
     margin: 0;
@@ -9,20 +9,23 @@
 .menu {
     display: flex;
     background-color: black;
-    height: 50px;
-    border-bottom: solid 5px #D4C26A;
+    height: 60px;
+    border-bottom: solid 2px #D4C26A;
+    font-family: system-ui;
 }
 
 /*------------------------------*/
 h1 {
     text-align: center;
-    font-family: 'Dancing Script', cursiva;
-    font-size: 50px;
+    font-family: Vegur, 'PT Sans', Verdana, sans-serif;
+    font-size: 40px;
     color: #D4C26A;
     padding: 10px;
 }
+
 .container-banner {
-    background-color: #D4C26A;;
+    background-color: #D4C26A;
+    color: #ffffff;
     display: flex;
     flex-direction: row-reverse;
     gap: 100px;
@@ -37,18 +40,22 @@ h1 {
     list-style: none;
 }
 
-.container-cards{
+.container-cards {
     display: flex;
     justify-content: center;
     gap: 40px;
     padding: 20px;
 }
 
-.container-cards p{
+.container-cards p, p {
     font-family: system-ui;
 }
- .ubicacion, .medios-de-pago, .envios {
+
+.ubicacion,
+.medios-de-pago,
+.envios {
     background-color: #D4C26A;
+    border-radius: 16px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -58,18 +65,20 @@ h1 {
     padding: 40px;
     width: 20%;
 }
+
 /*-----------productos-----------*/
 
-.productos{
+.productos {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 }
-.prod{
+
+.prod {
     display: flex;
     align-items: center;
-    list-style: none; 
+    list-style: none;
     padding: 20px;
 }
 
@@ -81,30 +90,41 @@ h1 {
     transition: all 500ms ease;
 }
 
-.img-prod:hover{
+.img-prod:hover {
     transform: scale(1.1);
 }
-#btn-dormitorio, #btn-cortinas, #btn-muebles, #btn-deco{
+
+#btn-dormitorio,
+#btn-cortinas,
+#btn-muebles,
+#btn-deco {
     height: 35px;
     width: 150px;
     position: absolute;
-    border-radius: 5px ;
+    border-radius: 5px;
     border: 3px solid #D4C26A;
     font-size: 20px;
     color: #D4C26A;
     background: rgba(255, 255, 2555, 0.8);
 }
 
-#btn-dormitorio, #btn-muebles{ 
-    right: 68%; 
+#btn-dormitorio,
+#btn-muebles {
+    right: 68%;
 }
-#btn-dormitorio ,#btn-cortinas{
-    top:50%;
+
+#btn-dormitorio,
+#btn-cortinas {
+    top: 50%;
 }
-#btn-cortinas, #btn-deco{
+
+#btn-cortinas,
+#btn-deco {
     right: 20%;
 }
-#btn-muebles,#btn-deco{
+
+#btn-muebles,
+#btn-deco {
     top: 120%;
 }
 
@@ -150,13 +170,13 @@ footer {
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
+    position: relative;
 }
 
-.container-form-titulo{
+.container-form-titulo {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
+    align-items: center;
     margin: 20px;
 }
 
@@ -164,10 +184,12 @@ form {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin: 20px;
     width: 500px;
+    position: relative;
 }
 
-input, textarea {
+input {
     height: 40px;
     width: 100%;
     padding: 10px;
@@ -175,14 +197,95 @@ input, textarea {
     box-sizing: border-box;
 }
 
-button {
+.input-sumbit {
     background-color: #000;
     border: none;
+    border-radius: 27px;
     color: white;
     cursor: pointer;
     font-size: 16px;
     padding: 15px 32px;
-   
 }
 
-/*-----------FORM------------*/
+/*-----------captcha------------*/
+.container-captcha {
+    display: flex;
+    background-color: #f0f8ff;
+    height: 70px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn-refesh-captcha {
+    background-color: #000;
+    border: none;
+    border-radius: 27px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 7px 16px;
+}
+
+.container-captcha .btn-refesh-captcha img {
+    width: 20px;
+    vertical-align: bottom;
+}
+
+.container-captcha p {
+    width: 100px;
+    letter-spacing: 6px;
+}
+
+.checkbox {
+    height: auto;
+    width: auto;
+}
+
+.mensaje-respuesta-incorrecta {
+    color: red;
+}
+
+.mensaje-respuesta-correcta {
+    color: green;
+}
+
+.msj-form-enviado {
+    align-items: center;
+    background-color: whitesmoke;
+    border-radius: 35px;
+    border: 3px solid #000;
+    height: 150px;
+    display: flex;
+    width: 300px;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    z-index: auto;
+}
+
+.btn-cerrar-alerta {
+    border: solid 1px;
+    border-radius: 16px;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: bisque;
+
+}
+
+.ocultar-mensaje-alerta {
+    display: none;
+}
+
+.btn-cerrar-alerta {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.fa-circle-check {
+    color: #4fb234;
+}
