@@ -17,7 +17,7 @@
 /*------------------------------*/
 h1,h2 {
     text-align: center;
-    font-family: Vegur, 'PT Sans', Verdana, sans-serif;
+    font-family: 'Dancing Script', cursiva;
     font-size: 40px;
     color: #D4C26A;
     padding: 10px;
@@ -33,11 +33,11 @@ h1,h2 {
     align-items: center;
     margin: 20px;
 }
-
-.container-banner ul {
+.p-container-banner{
     font-family: system-ui;
     font-size: 50px;
-    list-style: none;
+    padding: 20px;
+
 }
 
 .container-cards {
@@ -47,7 +47,7 @@ h1,h2 {
     padding: 20px;
 }
 
-.container-cards p, p {
+.container-cards p {
     font-family: system-ui;
 }
 
@@ -102,41 +102,16 @@ h1,h2 {
     height: 35px;
     width: 150px;
     position: absolute;
-<<<<<<< HEAD
     right: 40%; 
     top:50%;
-    border-radius: 5px ;
-=======
     border-radius: 5px;
->>>>>>> d841a58d90bc4eb8418b0373974df2a254751007
     border: 3px solid #D4C26A;
     font-size: 20px;
     color: #D4C26A;
     background: rgba(255, 255, 2555, 0.8);
 }
 
-<<<<<<< HEAD
-=======
-#btn-dormitorio,
-#btn-muebles {
-    right: 68%;
-}
 
-#btn-dormitorio,
-#btn-cortinas {
-    top: 50%;
-}
-
-#btn-cortinas,
-#btn-deco {
-    right: 20%;
-}
-
-#btn-muebles,
-#btn-deco {
-    top: 120%;
-}
->>>>>>> d841a58d90bc4eb8418b0373974df2a254751007
 
 /*-----------productos-----------*/
 
@@ -154,7 +129,7 @@ h2{
 .tabla-prod,td,tr{
 	width: 800px;
 	border:3px solid #0902021f;
-	/*border-collapse: collapse;*/
+	border-collapse: collapse;
 	text-align: center;
 	font-family: 'Noto Serif', serif;	
 }
@@ -254,22 +229,15 @@ input {
     box-sizing: border-box;
 }
 
-<<<<<<< HEAD
-.btn-enviar {
-=======
+
 .input-sumbit {
->>>>>>> d841a58d90bc4eb8418b0373974df2a254751007
     background-color: #000;
     border: none;
     border-radius: 27px;
     color: white;
     cursor: pointer;
     font-size: 16px;
-<<<<<<< HEAD
     padding: 15px 32px;   
-=======
-    padding: 15px 32px;
->>>>>>> d841a58d90bc4eb8418b0373974df2a254751007
 }
 
 /*-----------captcha------------*/
