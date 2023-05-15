@@ -1,18 +1,18 @@
 "use strict"
 const formulario = document.querySelector("#form");
 
-var textCaptcha = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789".split("");
-var captchaAleatorio;
-var captchaGenerado = [];
-var inputUsuario = document.querySelector("#input-rta-usuario");
-var mensajeEnviado = document.querySelector("#msj-form-enviado");
+let textCaptcha = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789".split("");
+let captchaAleatorio;
+let captchaGenerado = [];
+let inputUsuario = document.querySelector("#input-rta-usuario");
+let mensajeEnviado = document.querySelector("#msj-form-enviado");
 
 function obtenerDatosForm(formulario) {
-    var formData = new FormData(formulario);
-    var nombre = formData.get("nombre");
-    var apellido = formData.get("apellido");
-    var email = formData.get("email");
-    var mensaje = formData.get("mensaje");
+    let formData = new FormData(formulario);
+    let nombre = formData.get("nombre");
+    let apellido = formData.get("apellido");
+    let email = formData.get("email");
+    let mensaje = formData.get("mensaje");
 }
 
 function crearCaptcha() {
@@ -27,7 +27,7 @@ function crearCaptcha() {
     document.querySelector("#captcha").innerHTML = captchaAleatorio;
 }
 window.onload = function () {
-    var myInput = document.getElementById('captcha');
+    let myInput = document.getElementById('captcha');
     myInput.oncopy = function (e) {
         e.preventDefault();
     }
