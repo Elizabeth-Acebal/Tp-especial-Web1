@@ -1,6 +1,9 @@
 "use strict"
 const formulario = document.querySelector("#form");
 
+let recargar = document.querySelector("#btn-recargar").addEventListener("click", crearCaptcha);
+let cerrarMensaje = document.querySelector("#btn-cerrar-mensaje").addEventListener("click", ocultarMensajes);;
+
 let textCaptcha = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789".split("");
 let captchaAleatorio;
 let captchaGenerado = [];

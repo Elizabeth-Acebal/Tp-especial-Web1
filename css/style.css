@@ -15,7 +15,8 @@
 }
 
 /*------------------------------*/
-h1,h2 {
+h1,
+h2 {
     text-align: center;
     font-family: 'Dancing Script', cursiva;
     font-size: 40px;
@@ -33,7 +34,8 @@ h1,h2 {
     align-items: center;
     margin: 20px;
 }
-.p-container-banner{
+
+.p-container-banner {
     font-family: system-ui;
     font-size: 50px;
     padding: 20px;
@@ -102,8 +104,8 @@ h1,h2 {
     height: 35px;
     width: 150px;
     position: absolute;
-    right: 40%; 
-    top:50%;
+    right: 40%;
+    top: 50%;
     border-radius: 5px;
     border: 3px solid #D4C26A;
     font-size: 20px;
@@ -116,45 +118,53 @@ h1,h2 {
 /*-----------productos-----------*/
 
 /*-----------carrito de compras-----------*/
-h2{
+h2 {
     font-size: 40px;
-}  
-.container-tabla{
+}
+
+.container-tabla {
     display: flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    padding:5px;
-    
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5px;
+
 }
-.tabla-prod,td,tr{
-	width: 800px;
-	border:3px solid #0902021f;
-	border-collapse: collapse;
-	text-align: center;
-	font-family: 'Noto Serif', serif;	
+
+.tabla-prod,
+td,
+tr {
+    width: 800px;
+    border: 3px solid #0902021f;
+    border-collapse: collapse;
+    text-align: center;
+    font-family: 'Noto Serif', serif;
 }
-thead{
-    gap:20px;
+
+thead {
+    gap: 20px;
 }
-.img-prod-tabla{
+
+.img-prod-tabla {
     height: 80px;
     width: 80px;
     border-radius: 50%;
     padding: 5px;
-    
+
 }
 
-#btn-comprar:hover, #btn-eliminar:hover{
+#btn-comprar:hover,
+#btn-eliminar:hover {
     background-color: #D4C26A;
     color: black;
 }
 
 
-#btn-eliminar, #btn-comprar{
+#btn-eliminar,
+#btn-comprar {
     background-color: black;
     border-radius: 5px;
-    color:#D4C26A; 
-    padding: 10px; 
+    color: #D4C26A;
+    padding: 10px;
 }
 
 
@@ -237,7 +247,7 @@ input {
     color: white;
     cursor: pointer;
     font-size: 16px;
-    padding: 15px 32px;   
+    padding: 15px 32px;
 }
 
 /*-----------captcha------------*/
@@ -284,17 +294,21 @@ input {
 
 .msj-form-enviado {
     align-items: center;
-    background-color: whitesmoke;
+    background-color: #f5f5f5;
     border-radius: 35px;
-    border: 3px solid #000;
-    height: 150px;
+    border: 1px solid #000;
     display: flex;
-    width: 300px;
-    justify-content: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    justify-content: center;
     position: absolute;
-    z-index: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 250px;
+    height: 260px;
+    margin: auto;
 }
 
 .btn-cerrar-alerta {
