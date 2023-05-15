@@ -18,32 +18,63 @@
             <a href="contacto.html" class="item">Contacto</a>
         </nav>
     </header>
-    <div class="container-form">
-        <div class="container-form-titulo">
-            <h1>Contactanos</h1>
-            <p>Coordinar horario para la entrega de productos. Trabajamos con servicio de cadetería para entregas a
-                domicilio y
-                hacemos envíos a todo el país.</p>
-        </div>
-        <form action="">
-            <label for="nombre">Nombre</label>
-            <input id="nombre" type="text" name="nombre" value="" />
 
-            <label for="nombre">Apellido</label>
-            <input id="nombre" type="text" name="nombre" value="" />
-
-            <label for="email">E-mail</label>
-            <input id="email" type="email" name="email" value="" />
-
-            <label for="comentario">Mensaje (Opcional)</label>
-            <textarea id="comentario" name="comentario">
-            </textarea>
-
-            <button type="submit" class="btn-enviar">Enviar</button>
-        </form>
-
+    <div class="container-form-titulo">
+        <h1>Contactanos</h1>
+        <p>Coordinar horario para la entrega de productos. Trabajamos con servicio de cadetería para entregas a
+            domicilio y
+            hacemos envíos a todo el país.</p>
     </div>
 
+
+    <div class="container-form">
+
+        <form id="form" class="formulario">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" placeholder="Nombre" minlength="4" maxlength="12" required />
+
+            <label for="apellido">Apellido</label>
+            <input type="text" name="apellido" placeholder="Apellido" minlength="4" maxlength="14" required />
+
+            <label for="email">E-mail</label>
+            <input type="email" name="email" placeholder="Email" value="" required />
+
+            <label for="mensaje" maxlength="60">Mensaje (Opcional)</label>
+
+            <textarea name="mensaje" placeholder="Deje su mensaje aquí"></textarea>
+
+            <!--CAPTCHA-->
+            <div class="container-captcha">
+                <p id="captcha"></p>
+                <button class="btn-refesh-captcha" type="button" onclick="crearCaptcha()">
+                    <img src="./images/img-recaptcha.png" alt="">
+                    Recargar
+                </button>
+            </div>
+
+            <input type="text" name="captcha" id="input-rta-usuario" class=""
+                placeholder="Escriba aqui la combinación de letras y/o números.">
+
+            <p id="respuesta-captcha"></p>
+
+            <div class="check-box">
+                <label for="">No soy un robot</label>
+                <input class="checkbox" type="checkbox" name="" id="chequer">
+                <p id="respuesta-check"></p>
+            </div>
+
+            <input class="input-sumbit" type="submit" placeholder="Enviar">
+        </form>
+        <div class="msj-form-enviado ocultar-mensaje-alerta" id="msj-form-enviado">
+            <p class="form-enviado">
+                Tu mensaje se ha enviado
+            </p>
+            ¡"Gracias por contactarnos!
+            <i class="fa-solid fa-circle-check"></i>
+            <span class="btn-cerrar-alerta" onclick="ocultarMensajes();">Aceptar</span>
+        </div>
+
+    </div>
 
     <div class="container-cards">
         <div class="medios-de-pago">
@@ -61,6 +92,7 @@
             <p>SUCURSALES</p>
         </div>
     </div>
+
     <footer>
         <a href="index.html" class="item">Inicio</a>
         <a href="productos.html" class="item">Productos</a>
@@ -71,6 +103,8 @@
                 <li><a href="#" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a></li>
             </ul>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
