@@ -13,6 +13,14 @@
     border-bottom: solid 2px #D4C26A;
     font-family: system-ui;
 }
+.item {
+    color: white;
+    font-size: 20px;
+    margin: 7px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
 
 /*------------------------------*/
 h1,
@@ -113,8 +121,6 @@ h2 {
     background: rgba(255, 255, 2555, 0.8);
 }
 
-
-
 /*-----------productos-----------*/
 
 /*-----------carrito de compras-----------*/
@@ -161,40 +167,49 @@ thead {
 
 #btn-eliminar,
 #btn-comprar {
-    background-color: black;
+    background-color: #000000;
     border-radius: 5px;
     color: #D4C26A;
     padding: 10px;
 }
 
-
 /*-----------carrito de compras-----------*/
 
 footer {
     display: flex;
-    background-color: black;
-    height: 50px;
-    border-top: solid 5px #D4C26A;
+    background-color: #000000;
+    height: 220px;
+    justify-content: space-around;
+    border-top: solid 2px #D4C26A;
+    padding: 30px;
 }
 
-.item {
+footer p {
+    color: #ffffff;
+    margin-left: 7px;
+}
+
+.contacto{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.item-contacto {
     color: white;
-    font-size: 20px;
-    margin: 7px;
-    padding: 10px;
-    text-align: center;
+    font-size: 15px;
+    margin: 10px;
     text-decoration: none;
 }
 
-.item:hover {
-    opacity: 0.6;
-    background: #D4C26A;
+.item:hover, .item-contacto:hover{
+    color:#D4C26A;
+    transition:0.5s;
 }
 
 .redes {
     display: flex;
     margin: 10px;
-    margin-left: 1030px;
     list-style: none;
 }
 
@@ -203,6 +218,17 @@ footer {
     font-size: 25px;
     margin: 5px;
     padding: 5px;
+}
+
+.sobre-nosotros{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.copyright{
+    display: flex;
+    align-items: end;
 }
 
 /*-----------FORM------------*/
