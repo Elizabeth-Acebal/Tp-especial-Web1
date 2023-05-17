@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/d8f189ec98.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
     <header>
         <nav class="menu">
@@ -18,82 +17,67 @@
             <a href="contacto.html" class="item">Contacto</a>
         </nav>
     </header>
-
     <div class="container-form-titulo">
         <h1>Contactanos</h1>
-        <p>Coordinar horario para la entrega de productos. Trabajamos con servicio de cadetería para entregas a
+        <p>
+            Coordinar horario para la entrega de productos. Trabajamos con servicio de cadetería para entregas a
             domicilio y
-            hacemos envíos a todo el país.</p>
+            hacemos envíos a todo el país.
+        </p>
     </div>
-
-
     <div class="container-form">
-
         <form id="form" class="formulario">
             <label for="nombre">Nombre</label>
             <input type="text" name="nombre" placeholder="Nombre" minlength="4" maxlength="12" required />
-
             <label for="apellido">Apellido</label>
             <input type="text" name="apellido" placeholder="Apellido" minlength="4" maxlength="14" required />
-
             <label for="email">E-mail</label>
             <input type="email" name="email" placeholder="Email" value="" required />
-
             <label for="mensaje" maxlength="60">Mensaje (Opcional)</label>
-
             <textarea name="mensaje" placeholder="Deje su mensaje aquí"></textarea>
-
             <!--CAPTCHA-->
             <div class="container-captcha">
                 <p id="captcha"></p>
                 <button class="btn-refesh-captcha" id="btn-recargar" type="button">
-                    <img src="./images/img-recaptcha.png" alt="">
-                    Recargar
+                    <img src="./images/img-recaptcha.png" alt=""/>
+                    <p>Recargar</p>
                 </button>
             </div>
-
             <input type="text" name="captcha" id="input-rta-usuario" class=""
-                placeholder="Escriba aqui la combinación de letras y/o números.">
-
+                placeholder="Escriba aqui la combinación de letras y/o números."/>
             <p id="respuesta-captcha"></p>
-
             <div class="check-box">
                 <label for="">No soy un robot</label>
-                <input class="checkbox" type="checkbox" name="" id="chequer">
+                <input class="checkbox" type="checkbox" name="" id="chequer"/>
                 <p id="respuesta-check"></p>
             </div>
-
-            <input class="input-sumbit" type="submit" placeholder="Enviar">
+            <input class="input-sumbit" type="submit" placeholder="Enviar"/>
         </form>
         <div class="msj-form-enviado ocultar-mensaje-alerta" id="msj-form-enviado">
             <p class="form-enviado">
-                Tu mensaje se ha enviado
+                Tu mensaje se ha enviado   
             </p>
-            ¡"Gracias por contactarnos!
+            <p class="form-enviado">
+                ¡Gracias por contactarnos!
+            </p>
             <i class="fa-solid fa-circle-check"></i>
             <span class="btn-cerrar-alerta" id="btn-cerrar-mensaje">Aceptar</span>
         </div>
-
     </div>
-
     <div class="container-cards">
         <div class="medios-de-pago">
             <i class="fa-solid fa-credit-card fa-2xl"></i>
             <p>MEDIOS DE PAGO</p>
         </div>
-
         <div class="medios-de-pago">
             <i class="fa-solid fa-truck fa-2xl"></i>
             <p>ENVIOS A TODO EL PAIS</p>
         </div>
-
         <div class="ubicacion">
             <i class="fa-solid fa-location-dot fa-2xl"></i>
             <p>SUCURSALES</p>
         </div>
     </div>
-
-
     <footer>
         <div class="contacto">
             <p>Contactanos</p>
@@ -103,7 +87,6 @@
             <a href="#" class="item-contacto "><i class="fa-solid fa-envelope" style="color: #d4c26a;"></i>
                 contemporanea@gmail.com</a>
         </div>
-
         <div class="container-redes">
             <p>Nuestras redes</p>
             <ul class="redes">
@@ -118,9 +101,7 @@
             <p>Podés encontrar todo para tu hogar acá.</p>
         </div>
         <p class="copyright">Copyright &copy; contemporanea</p>
-
     </footer>
-
     <script src="js/script.js"></script>
 </body>
 
