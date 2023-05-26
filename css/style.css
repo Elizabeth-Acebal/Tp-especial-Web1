@@ -6,13 +6,50 @@
     box-sizing: border-box;
 }
 
-.menu {
-    display: flex;
-    background-color: black;
+img.img-logo{
     height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+/*-------- menu responsive-------*/
+.logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 10px;
+    color: #D4C26A;
+    background-color: #000000;
+}
+
+nav.menu {
+    background-color: black;
     border-bottom: solid 2px #D4C26A;
     font-family: system-ui;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    display: none;
+    flex-direction: column;
 }
+
+.btn-menu{
+    height: 60px;
+    width: 50px;
+    font-size: 25px;
+    color: #D4C26A;
+    border: none;
+    background-color: #000000;
+}
+
+
+
+.container-menu{
+    width: 100%;
+    display: flex;
+    background-color: #000000;
+}
+
 .item {
     color: white;
     font-size: 20px;
@@ -21,7 +58,10 @@
     text-align: center;
     text-decoration: none;
 }
-
+.menu.cambio{
+    display: flex;
+}
+/*------- menu responsive-------*/
 /*------------------------------*/
 h1,
 h2 {
@@ -75,10 +115,51 @@ h2 {
     padding: 40px;
     width: 20%;
 }
+/*-----------RESPONSIVE PRODUCTOS-----------*/
+
+.productos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.prod {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 20px;
+    position: relative;
+}
+
+.img-prod {
+    height: 150%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+#btn-dormitorio,
+#btn-cortinas,
+#btn-muebles,
+#btn-deco {
+    height: 10%;
+    width: 30%;
+    position: absolute;
+    right: 35%;
+    top: 45%;
+    border-radius: 8%;
+    border: 3px solid #D4C26A;
+    font-size: 100%;
+    color: #D4C26A;
+    background: rgba(255, 255, 2555, 0.8);
+}
+
+
+/*-----------RESPONSIVE PRODUCTOS-----------*/
 
 /*-----------productos-----------*/
 
-.productos {
+/*.productos {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -120,7 +201,7 @@ h2 {
     color: #D4C26A;
     background: rgba(255, 255, 2555, 0.8);
 }
-
+*/
 /*-----------productos-----------*/
 
 /*-----------carrito de compras-----------*/
@@ -174,6 +255,11 @@ thead {
 }
 
 /*-----------carrito de compras-----------*/
+/*---------FOOTER RESPONSIVE-----------*/
+
+
+
+/*---------FOOTER RESPONSIVE-----------*/
 
 footer {
     display: flex;
@@ -361,4 +447,39 @@ input {
 
 .fa-circle-check {
     color: #4fb234;
+}
+/*RESPONSIVE DESKTOP!!!!*/
+@media (min-width:600px){
+    .btn-menu{
+        visibility: hidden;
+    }
+    nav.menu{
+        display: flex;
+        flex-direction: row;
+    }
+    .productos {
+        flex-direction: row;
+    }
+    
+    .img-prod {
+        height: 500px;
+        width: 660px;
+        border-radius: 10px;
+        filter: drop-shadow(9px 9px 9px #D4C26A);
+        transition: all 500ms ease;
+    }
+    
+    .img-prod:hover {
+        transform: scale(1.1);
+    }
+    
+    #btn-dormitorio,
+    #btn-cortinas,
+    #btn-muebles,
+    #btn-deco {
+        height: 35px;
+        width: 150px;
+        right: 40%;
+        top: 50%;
+    }
 }
