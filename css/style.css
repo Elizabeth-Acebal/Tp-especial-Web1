@@ -6,13 +6,14 @@
     box-sizing: border-box;
 }
 
-img.img-logo{
+img.img-logo {
     height: 60px;
     width: 60px;
     border-radius: 50%;
 }
+
 /*-------- menu responsive-------*/
-.logo{
+.logo {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,7 +34,7 @@ nav.menu {
     flex-direction: column;
 }
 
-.btn-menu{
+.btn-menu {
     height: 60px;
     width: 50px;
     font-size: 25px;
@@ -42,9 +43,7 @@ nav.menu {
     background-color: #000000;
 }
 
-
-
-.container-menu{
+.container-menu {
     width: 100%;
     display: flex;
     background-color: #000000;
@@ -58,9 +57,11 @@ nav.menu {
     text-align: center;
     text-decoration: none;
 }
-.menu.cambio{
+
+.menu.cambio {
     display: flex;
 }
+
 /*------- menu responsive-------*/
 /*------------------------------*/
 h1,
@@ -73,27 +74,30 @@ h2 {
 }
 
 .container-banner {
-    background-color: #D4C26A;
-    color: #ffffff;
     display: flex;
     flex-direction: row-reverse;
-    gap: 100px;
-    justify-content: left;
-    align-items: center;
-    margin: 20px;
+    padding: 20px;
 }
 
 .p-container-banner {
-    font-family: system-ui;
-    font-size: 50px;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Dancing Script', cursiva;
+    font-size: 13px;
+    padding: 15px;
+    font-family: initial;
+    color: white;
+    background-color: #D4C26A;
+}
 
+.img-banner {
+    width: 430px;
 }
 
 .container-cards {
     display: flex;
-    justify-content: center;
-    gap: 40px;
+    justify-content: space-between;
     padding: 20px;
 }
 
@@ -105,16 +109,16 @@ h2 {
 .medios-de-pago,
 .envios {
     background-color: #D4C26A;
-    border-radius: 16px;
+    border-radius: 6px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 30px;
     height: 100px;
-    padding: 40px;
-    width: 20%;
+    width: 160px;
 }
+
 /*-----------RESPONSIVE PRODUCTOS-----------*/
 
 .productos {
@@ -256,69 +260,51 @@ thead {
 
 /*-----------carrito de compras-----------*/
 /*---------FOOTER RESPONSIVE-----------*/
-
-
-
-/*---------FOOTER RESPONSIVE-----------*/
-
 footer {
     display: flex;
     background-color: #000000;
-    height: 220px;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
     border-top: solid 2px #D4C26A;
-    padding: 30px;
+    padding: 20px;
+}
+
+.container-redes-footer {
+    display: flex;
+
+}
+
+.contacto-footer,
+.redes-footer,
+.aboutus-footer {
+    display: flex;
+    width: 170px;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.contacto-footer a,
+.redes-footer a {
+    text-decoration: none;
+    color: #ffffff;
+
+}
+
+.redes {
+    list-style: none;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 footer p {
     color: #ffffff;
     margin-left: 7px;
+    font-size: 14px;
 }
 
-.contacto{
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-}
-
-.item-contacto {
-    color: white;
-    font-size: 15px;
-    margin: 10px;
-    text-decoration: none;
-}
-
-.item:hover, .item-contacto:hover{
-    color:#D4C26A;
-    transition:0.5s;
-}
-
-.redes {
-    display: flex;
-    margin: 10px;
-    list-style: none;
-}
-
-.social-icon {
-    color: #D4C26A;
-    font-size: 25px;
-    margin: 5px;
-    padding: 5px;
-}
-
-.sobre-nosotros{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.copyright{
-    display: flex;
-    align-items: end;
-}
-
-/*-----------FORM------------*/
-
+/*form*/
 .container-form {
     display: flex;
     flex-direction: column;
@@ -362,7 +348,9 @@ input {
     padding: 15px 32px;
 }
 
+*/
 /*-----------captcha------------*/
+
 .container-captcha {
     display: flex;
     background-color: #f0f8ff;
@@ -448,19 +436,24 @@ input {
 .fa-circle-check {
     color: #4fb234;
 }
+
+/*-----------FORM------------*/
+
 /*RESPONSIVE DESKTOP!!!!*/
-@media (min-width:600px){
-    .btn-menu{
+@media (min-width:600px) {
+    .btn-menu {
         visibility: hidden;
     }
-    nav.menu{
+
+    nav.menu {
         display: flex;
         flex-direction: row;
     }
+
     .productos {
         flex-direction: row;
     }
-    
+
     .img-prod {
         height: 500px;
         width: 660px;
@@ -468,11 +461,11 @@ input {
         filter: drop-shadow(9px 9px 9px #D4C26A);
         transition: all 500ms ease;
     }
-    
+
     .img-prod:hover {
         transform: scale(1.1);
     }
-    
+
     #btn-dormitorio,
     #btn-cortinas,
     #btn-muebles,
@@ -481,5 +474,71 @@ input {
         width: 150px;
         right: 40%;
         top: 50%;
+    }
+
+    /*--------------Banner---------------*/
+    .container-banner {
+        justify-content: center;
+        margin: 20px;
+    }
+
+    .p-container-banner {
+        font-family: system-ui;
+        font-size: 50px;
+        padding: 84px;
+        width: 600px;
+    }
+
+    .img-banner {
+        width: 600px;
+    }
+
+    /*--------------Cards---------------*/
+    .container-cards {
+        justify-content: space-around;
+        padding: 0px;
+    }
+
+    .container-cards p {
+        font-family: system-ui;
+    }
+
+    .ubicacion,
+    .medios-de-pago,
+    .envios {
+        height: 120px;
+        width: 300px;
+    }
+
+    /*--------------Footer---------------*/
+
+    footer {
+        padding: 30px;
+        margin-top: 50px;
+    }
+
+    .container-redes-footer {
+        width: 93%;
+        justify-content: space-between;
+    }
+
+    .contacto-footer,
+    .redes-footer,
+    .aboutus-footer {
+        width: 500px;
+    }
+
+    .contacto-footer a,
+    .redes-footer a {
+        text-decoration: none;
+    }
+
+    .redes {
+        list-style: none;
+    }
+
+    footer p {
+        color: #ffffff;
+        margin-left: 7px;
     }
 }
