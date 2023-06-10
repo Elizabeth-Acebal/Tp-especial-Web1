@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,15 @@
     <title>Contemporanea Deco</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/d8f189ec98.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <div class="logo">
-            <img src="images/logocontem.jpg" alt="logo"class="img-logo">
+            <img src="images/logocontem.jpg" alt="logo" class="img-logo">
             <button class="btn-menu"><i class="fa-solid fa-bars"></i></button>
         </div>
         <div class="container-menu">
@@ -21,28 +25,91 @@
                 <a href="productos.html" class="item">Productos</a>
                 <a href="contacto.html" class="item">Contacto</a>
             </nav>
-        <div>
+            <div>
     </header>
     <h1>Productos</h1>
     <ul class="productos">
         <li class="prod">
-            <img src="images/dormitorio.jpeg" alt="dormitorio" class="img-prod"/>
+            <img src="images/dormitorio.jpeg" alt="dormitorio" class="img-prod" />
             <button id="btn-dormitorio">Dormitorio</button>
         </li>
         <li class="prod">
-            <img src="images/cortinas1.jpeg" alt="cortinas"  class="img-prod"/>
+            <img src="images/cortinas1.jpeg" alt="cortinas" class="img-prod" />
             <button id="btn-cortinas">Cortinas</button>
         </li>
         <li class="prod">
-            <img src="images/muebles.jpeg" alt="muebles"  class="img-prod"/>
+            <img src="images/muebles.jpeg" alt="muebles" class="img-prod" />
             <button id="btn-muebles">Muebles</button>
         </li>
         <li class="prod">
-            <img src="images/deco2.jpeg" alt="deco"  class="img-prod"/>
+            <img src="images/deco2.jpeg" alt="deco" class="img-prod" />
             <button id="btn-deco">Deco</button>
         </li>
     </ul>
-    <h2>Carrito de compras</h2>
+
+    <div class="container-tabla-dinamica">
+        <div id="administrar" class="container-carga-prod">
+
+            <h3>Administrar</h3>
+            <div class="form-carga">
+                <input type="text" id="producto" placeholder="Producto">
+                <input type="number" id="cantidad" placeholder="Cantidad">
+                <input type="number" id="precio" placeholder="Precio">
+            </div>
+            <div class="botones-tabla">
+                <button id="producto1">Agregar producto1</button>
+                <button id="botonx3">Boton X3</button>
+                <button id="vaciar">Vaciar Tabla</button>
+                <button id="producto3">Editar</button>
+            </div>
+            <table class="tabla-prod">
+                <thead>
+                    <th>Producto</th>
+                    <!--encabezado de tabla-->
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Opciones</th>
+                </thead>
+                <tbody id="lista-prod-agregado">
+
+                </tbody>
+
+            </table>
+        </div>
+
+        <div id="compra" class="container-carga-prod carrito">
+            <h1>lista de productor</h1>
+            <table class="tabla-prod">
+                <thead>
+                    <th>Producto</th>
+                    <!--encabezado de tabla-->
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Opciones</th>
+                </thead>
+                <tbody id="lista-prod-compra">
+
+                </tbody>
+
+            </table>
+
+            <h1> carrito de compras</h1>
+            <table class="tabla-prod">
+                <thead>
+                    <th>Producto</th>
+                    <!--encabezado de tabla-->
+                    <th>Precio</th>
+                    <th>Opciones</th>
+                </thead>
+                <tbody id="lista-prod-agregado-carrito">
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+    <!--<h2>Carrito de compras</h2>
     <div class="container-tabla">
         <table class="tabla-prod">
             <thead>
@@ -133,7 +200,7 @@
             </tr>  
                 
         </table>
-    </div>
+    </div> -->
     <footer>
         <div class="container-redes-footer">
             <div class="contacto-footer">
@@ -148,21 +215,25 @@
             <div class="redes-footer">
                 <p>Nuestras redes</p>
                 <ul class="redes">
-                    <li><a href="#" class="social-icon"><i class="fa-brands fa-instagram" style="color: #d4c26a;"></i>cont/insta</a>
+                    <li><a href="#" class="social-icon"><i class="fa-brands fa-instagram"
+                                style="color: #d4c26a;"></i>cont/insta</a>
                     </li>
-                    <li><a href="#" class="social-icon"><i class="fa-brands fa-facebook-f" style="color: #d4c26a;"></i>contemPdeco</a>
+                    <li><a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"
+                                style="color: #d4c26a;"></i>contemPdeco</a>
                     </li>
                     <li><a href="#" class="social-icon"><i class="fa-brands fa-whatsapp" style="color: #d4c26a;""></i>239-00000</a></li>
                 </ul>
             </div>
-            <div class="aboutus-footer">
-                <p>Sobre nosotros</p>
-                <p>Somos Contemporánea, apasionados por innovar en diseño.</p>
-                <p>Podés encontrar todo para tu hogar acá.</p>
+            <div class=" aboutus-footer">
+                                <p>Sobre nosotros</p>
+                                <p>Somos Contemporánea, apasionados por innovar en diseño.</p>
+                                <p>Podés encontrar todo para tu hogar acá.</p>
             </div>
         </div>
         <p class="copyright">Copyright &copy; contemporanea</p>
     </footer>
     <script src="js/btnmenu.js"></script>
+    <script src="js/agregar-productos.js"></script>
 </body>
+
 </html>
