@@ -97,7 +97,7 @@ h2 {
 }
 
 .img-banner {
-    width: 430px;
+    width: 80%;
 }
 
 .container-cards {
@@ -121,8 +121,10 @@ h2 {
     justify-content: space-evenly;
     align-items: center;
     height: 100px;
-    width: 160px;
+    width: 25%;
+    font-size: 70%;
 }
+
 
 /*-----------RESPONSIVE PRODUCTOS-----------*/
 
@@ -220,6 +222,46 @@ div.container-prodDormitorio p{
 
 /*-----------RESPONSIVE PRODUCTOS-----------*/
 
+.container-tabla-dinamica{
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-carga{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.container-carga-prod input {
+    height: 40px;
+    width: 60%;
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.botones-tabla{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 15px;
+}
+
+.tabla-prod thead, tbody{
+    position: relative;
+}
+
+.tabla-prod{
+    display: flex;
+    flex-direction: column;
+    background-color: cadetblue;
+    width: 60%;
+    position: relative;
+    align-items: center;
+    margin: 19%;
+}
 /*-----------productos-----------*/
 
 /*.productos {
@@ -271,7 +313,7 @@ div.container-prodDormitorio p{
 h2 {
     font-size: 40px;
 }
-
+/*
 .container-tabla {
     display: flex;
     justify-content: center;
@@ -315,7 +357,7 @@ thead {
     border-radius: 5px;
     color: #D4C26A;
     padding: 10px;
-}
+}*/
 
 /*-----------carrito de compras-----------*/
 /*---------FOOTER RESPONSIVE-----------*/
@@ -330,7 +372,8 @@ footer {
 }
 
 .container-redes-footer {
-    display: flex;
+    display: contents;
+    text-align: center;
 
 }
 
@@ -338,9 +381,14 @@ footer {
 .redes-footer,
 .aboutus-footer {
     display: flex;
-    width: 170px;
+    width: 50%;
     gap: 10px;
     flex-direction: column;
+}
+
+.aboutus-footer {
+ width:  100%;
+ margin: 30px 0px;
 }
 
 .contacto-footer a,
@@ -379,13 +427,15 @@ footer p {
     align-items: center;
     margin: 20px;
 }
-
+footer .copyright {
+    margin-top: 20px;
+}
 form {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin: 20px;
-    width: 500px;
+    width: 90%;
     position: relative;
 }
 
@@ -569,13 +619,13 @@ input {
 
     .p-container-banner {
         font-family: system-ui;
-        font-size: 50px;
-        padding: 84px;
-        width: 600px;
+        font-size: xx-large;
+        padding: 8%;
+       
     }
 
     .img-banner {
-        width: 600px;
+        width: 60%;
     }
 
     /*--------------Cards---------------*/
@@ -592,7 +642,8 @@ input {
     .medios-de-pago,
     .envios {
         height: 120px;
-        width: 300px;
+        width: 25%;
+        font-size: 90%;
     }
 
     /*--------------Footer---------------*/
@@ -603,15 +654,23 @@ input {
     }
 
     .container-redes-footer {
+        display: flex;
         width: 93%;
         justify-content: space-between;
+        text-align: start;
     }
+
 
     .contacto-footer,
     .redes-footer,
     .aboutus-footer {
         width: 500px;
     }
+
+    .aboutus-footer {
+        width:  100%;
+        margin: 0px 0px;
+       }
 
     .contacto-footer a,
     .redes-footer a {
