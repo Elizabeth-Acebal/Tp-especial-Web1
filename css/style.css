@@ -6,21 +6,24 @@
     box-sizing: border-box;
 }
 
-img.img-logo {
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-}
+
 
 /*-------- menu responsive-------*/
 .logo {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     height: 60px;
     padding: 10px;
     color: #D4C26A;
     background-color: #000000;
+}
+img.img-logo {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    position: absolute;
+    margin-right: 85%;
 }
 
 nav.menu {
@@ -37,11 +40,12 @@ nav.menu {
 .btn-menu {
     height: 60px;
     width: 50px;
-    font-size: 25px;
+    font-size: 20px;
     color: #D4C26A;
     border: none;
     background-color: #000000;
 }
+
 
 .container-menu {
     width: 100%;
@@ -71,6 +75,7 @@ h2 {
     font-size: 40px;
     color: #D4C26A;
     padding: 10px;
+    text-decoration-line: line-through;
 }
 
 .container-banner {
@@ -141,6 +146,12 @@ h2 {
     width: 100%;
     border-radius: 10px;
 }
+/*NUEVO*/
+button a{
+    font-size: 100%;
+    color: #D4C26A;
+    text-decoration: none;
+}
 
 #btn-dormitorio,
 #btn-cortinas,
@@ -153,10 +164,58 @@ h2 {
     top: 45%;
     border-radius: 8%;
     border: 3px solid #D4C26A;
-    font-size: 100%;
-    color: #D4C26A;
     background: rgba(255, 255, 2555, 0.8);
 }
+
+/*PRUEBA CARRITO DE COMPRAS*/
+.padre, .container-prodDormitorio{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+
+}
+.container-prodDormitorio{
+    width: 80%;
+    height:10%;  /*NO ME TOMA NINGUN ALTO*/
+    background-color: beige;
+    border-radius: 10px;    
+    
+}
+
+#img-prod-carrito{
+    width: 100%;
+    height: 40%;   
+    margin-bottom: 5px;
+}
+
+.btn-agregar{
+    width: 100%;
+    height: 35px;
+    background-color:#000000;
+    color: white;
+    border-radius: 10px;   
+    
+}
+div.container-prodDormitorio p{
+    font-size: 20px;
+    text-align: center;
+}
+
+.carrito-compras p{
+    color: #D4C26A;
+    text-align: center;
+    font-size: 20px;
+    border-style: double;
+    margin-top: 5%;
+}
+.p-oculto{
+    visibility: hidden;
+}
+
+/*PRUEBA CARRITO DE COMPRAS*/
+
+
 
 
 /*-----------RESPONSIVE PRODUCTOS-----------*/
@@ -267,6 +326,7 @@ footer {
     justify-content: center;
     border-top: solid 2px #D4C26A;
     padding: 20px;
+    flex-shrink: 0;/*VER PORQUE NO FUNCIONA*/
 }
 
 .container-redes-footer {
@@ -348,7 +408,7 @@ input {
     padding: 15px 32px;
 }
 
-*/
+
 /*-----------captcha------------*/
 
 .container-captcha {
@@ -441,26 +501,51 @@ input {
 
 /*RESPONSIVE DESKTOP!!!!*/
 @media (min-width:600px) {
-    .btn-menu {
+    img.img-logo {
+        margin-right: 650px;
+    }
+    .btn-menu{
         visibility: hidden;
     }
+    .btn-compras{
+        margin-left: 1400px;
+    }
+
 
     nav.menu {
         display: flex;
         flex-direction: row;
     }
 
-    .productos {
+    .productos ,.padre{
         flex-direction: row;
     }
+    .padre{
+        flex-wrap: wrap;
+    }
+    .btn-agregar{
+        width: 100%;
+    }
+    .container-prodDormitorio{
+        width: 35%;
+        height:10%;  /*NO ME TOMA NINGUN ALTO*/
+        margin:10px
+        
+    }
 
-    .img-prod {
+    .img-prod, #img-prod-carrito {
         height: 500px;
         width: 660px;
         border-radius: 10px;
         filter: drop-shadow(9px 9px 9px #D4C26A);
         transition: all 500ms ease;
     }
+    #img-prod-carrito{
+        width: 100%;
+    }
+
+    /*IMAGENES DENTRO DE CADA ITEM*/
+    
 
     .img-prod:hover {
         transform: scale(1.1);
