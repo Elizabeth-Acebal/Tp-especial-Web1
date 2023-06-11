@@ -243,10 +243,20 @@ div.container-prodDormitorio p{
 }
 
 .botones-tabla{
+    width: 100%;
     display: flex;
     justify-content: center;
     padding: 20px;
-    gap: 15px;
+    gap: 10px;
+}
+.botones-tabla button{
+    height:70%;
+    border:#D4C26A;
+    color: #D4C26A;
+    font-size: 15px;
+    padding: 1%;
+    border:solid 3px #D4C26A;
+    border-radius: 5%;
 }
 
 .tabla-prod thead, tbody{
