@@ -27,6 +27,7 @@
             </nav>
             <div>
     </header>
+
     <h1>Productos</h1>
     <ul class="productos">
         <li class="prod">
@@ -48,13 +49,13 @@
     </ul>
 
     <div class="container-tabla-dinamica">
-        <div style="padding:40px; text-align: center;">
+        <div class="container-btn-adm-comprar">
             <button id="btn-administrar">Administrar</button>
             <button id="btn-comprar">comprar</button>
         </div>
         <div id="administrar" class="container-carga-prod">
 
-            <h3>Administrar</h3>
+            <h2>Administrar</h2>
             <div class="form-carga">
                 <input type="text" id="producto" placeholder="Producto">
                 <input type="number" id="cantidad" placeholder="Cantidad">
@@ -80,7 +81,7 @@
         </div>
 
         <div id="compra" class="container-carga-prod carrito">
-            <h1>lista de productor</h1>
+            <h1 >Lista de productos</h1>
             <table class="tabla-prod">
                 <thead>
                     <th>Producto</th>
@@ -95,8 +96,8 @@
 
             </table>
 
-            <h1> carrito de compras</h1>
-            <table class="tabla-prod">
+            <h2> Carrito de compras</h2>
+            <table class="tabla-prod tabla-carrito">
                 <thead>
                     <th>Producto</th>
                     <!--encabezado de tabla-->
