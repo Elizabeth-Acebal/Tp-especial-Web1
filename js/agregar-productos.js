@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    agregarX3();
     document.querySelector("#btn-administrar").addEventListener("click", administrar);
     document.querySelector("#btn-comprar").addEventListener("click", comprar);
     document.querySelector("#producto1").addEventListener("click", agregarProd1);
@@ -8,11 +7,13 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector("#botonx3").addEventListener("click", agregarX3)
 });
 
-/*Sillas cantidad 100
-sillon cantidad 200
-*/
 
-let datosProductos = [];
+let datosProductos = [
+    { producto: 'Lamparas', cantidad: 10, precio: 000 },
+    { producto: 'Banquetas', cantidad: 5, precio: 000 },
+    { producto: 'Sillones', cantidad: 8, precio: 000 }
+];
+actualizarTabla();
 let datosProductosCarrito = [];
 
 function agregarProd1() {
