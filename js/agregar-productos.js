@@ -41,7 +41,7 @@ function actualizarTabla() {
             "<td>" + prod.producto + "</td>" +
             "<td>" + prod.precio + "</td>" +
             "<td>" + prod.cantidad + "</td>" +
-            `<td><button type='button' onclick='eliminarElemento( ` + indice + ` )'>elminar</button>` +
+            `<td><button type='button' class='btn-eliminar' onclick='eliminarElemento( ` + indice + ` )'>elminar</button>` +
             "</tr>";
     }
 }
@@ -56,7 +56,7 @@ function actualizarTablaCarrito() {
             "<tr>" +
             "<td>" + prod.producto + "</td>" +
             "<td>" + prod.precio + "</td>" +
-            "<td><button type='button' onclick='eliminarElementoCarrito( `+ indice +`  )'>elminar</button></td>" +
+            "<td><button type='button'  class='btn-eliminar' onclick='eliminarElementoCarrito( `+ indice +`  )'>elminar</button></td>" +
             "</tr>";
     }
 }
@@ -73,7 +73,7 @@ function actualizarTablaCompra() {
             "<td>" + prod.producto + "</td>" +
             "<td>" + prod.precio + "</td>" +
             "<td>" + prod.cantidad + "</td>" +
-            " <td><button type='button' onclick='AgregarCarrito( " + indice + " )'>Agregar</button></td>" +
+            " <td><button type='button' class='agregar-prod' onclick='agregarCarrito( " + indice + " )'>Agregar</button></td>" +
             "</tr>";
     }
 
@@ -95,7 +95,7 @@ function eliminarElementoCarrito(indice) {
     actualizarTablaCarrito();
 }
 
-function AgregarCarrito(indice) {
+function agregarCarrito(indice) {
     console.log(datosProductos[indice]);
     if (datosProductos[indice].cantidad > 0) {
         datosProductos[indice].cantidad -= 1;
