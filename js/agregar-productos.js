@@ -19,8 +19,8 @@ let datosProductosCarrito = [];
 function agregarProd1() {
     let cantInput = document.querySelector("#cantidad").value;
     let precioInput = document.querySelector("#precio").value;
-    let prodInput = document.querySelector("#producto").value; //capturo lo que se escribio en el input
-    let itemProducto = { //tiene - produc -cantidad - precio
+    let prodInput = document.querySelector("#producto").value; 
+    let itemProducto = {
         producto: prodInput,
         cantidad: cantInput,
         precio: precioInput,
@@ -33,16 +33,23 @@ function actualizarTabla() {
     console.table(datosProductos);
     let productosDom = document.querySelector("#lista-prod-agregado");
     productosDom.innerHTML = "";
-
+    let filaHTML;
     for (const [indice, prod] of datosProductos.entries()) {
-
+        if (indice < 3) {
+            filaHTML = "<tr class='destacado'>";
+          }
+          else { // sino esto 
+            filaHTML =  "<tr>";
+          };
         productosDom.innerHTML +=
-            "<tr>" +
+            filaHTML +
             "<td>" + prod.producto + "</td>" +
             "<td>" + prod.precio + "</td>" +
             "<td>" + prod.cantidad + "</td>" +
             `<td><button type='button' class='btn-eliminar' onclick='eliminarElemento( ` + indice + ` )'>elminar</button>` +
             "</tr>";
+
+ 
     }
 }
 function actualizarTablaCarrito() {
@@ -100,7 +107,7 @@ function agregarCarrito(indice) {
     if (datosProductos[indice].cantidad > 0) {
         datosProductos[indice].cantidad -= 1;
 
-        let itemProducto = { //tiene - produc -cantidad - precio
+        let itemProducto = { 
             producto: datosProductos[indice].producto,
             precio: datosProductos[indice].precio,
         }
@@ -108,9 +115,7 @@ function agregarCarrito(indice) {
 
         actualizarTablaCarrito();
         actualizarTablaCompra();
-    } else {
-        alert("No hay stock de este preoductor")
-    }
+    } 
 }
 
 function comprar() {
@@ -132,7 +137,7 @@ function administrar() {
 function agregarX3() {
 
     for (let index = 0; index < 3; index++) {
-        let itemProducto = { //tiene - produc -cantidad - precio
+        let itemProducto = { 
             producto: 'producto' + index,
             cantidad: 20,
             precio: 45,
