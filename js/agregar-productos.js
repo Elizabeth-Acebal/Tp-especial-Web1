@@ -72,7 +72,7 @@ function actualizarTablaCompra() {
             "<td>" + prod.producto + "</td>" +
             "<td>" + prod.precio + "</td>" +
             "<td>" + prod.cantidad + "</td>" +
-            "<button type='button' onclick='AgregarCarrito( " + indice + " )'>Agregar</button></td>" +
+            " <td><button type='button' onclick='AgregarCarrito( " + indice + " )'>Agregar</button></td>" +
             "</tr>";
     }
 
