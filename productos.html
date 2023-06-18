@@ -15,13 +15,12 @@
 
 <body>
     <header>
-        <div class="logo color-fuente background">
-            <img src="images/logocontem.jpg" alt="logo"class="img-logo">
-            <a href="carritoCompras.html" class="btn-compras"><i class="fa-solid fa-cart-shopping"></i></a> 
-            <button class="btn-menu color-fuente"><i class="fa-solid fa-bars"></i></button>
-        </div>    
-        <div class="container-menu">
-            <nav class="menu">
+        <div class="logo color-fuente background-negro">
+            <img src="images/logocontem.jpg" alt="logo" class="img-logo">
+            <button class="btn-menu color-fuente background-negro"><i class="fa-solid fa-bars"></i></button>
+        </div>
+        <div class="container-menu background-negro">
+            <nav class="menu background-negro">
                 <a href="index.html" class="item">Inicio</a>
                 <a href="productos.html" class="item">Productos</a>
                 <a href="contacto.html" class="item">Contacto</a>
@@ -50,15 +49,18 @@
 
     <div class="container-tabla-dinamica">
         <div class="container-btn-adm-comprar">
-            <button id="btn-administrar">Administrar</button>
-            <button id="btn-comprar">comprar</button>
+            <button id="btn-administrar" class="btn-admi color-fuente">Administrar</button>
+            <button id="btn-comprar" class="btn-comprar color-fuente">comprar</button>
         </div>
         <div id="administrar" class="container-carga-prod">
 
             <h2 class="color-fuente">Administrar</h2>
             <div class="form-carga">
+                <label for="producto">Producto</label>
                 <input type="text" id="producto" placeholder="Producto">
+                <label for="cantidad">Cantidad</label>
                 <input type="number" id="cantidad" placeholder="Cantidad">
+                <label for="precio">Precio</label>
                 <input type="number" id="precio" placeholder="Precio">
             </div>
             <div class="botones-tabla">
@@ -70,7 +72,6 @@
             <table class="tabla-prod">
                 <thead>
                     <th>Producto</th>
-                    <!--encabezado de tabla-->
                     <th>Precio</th>
                     <th>Cantidad</th>
                     <th>Opciones</th>
@@ -81,130 +82,31 @@
         </div>
 
         <div id="compra" class="container-carga-prod carrito">
-            <h1 class="color-fuente" >Lista de productos</h1>
+            <h1 class="color-fuente">Lista de productos</h1>
             <table class="tabla-prod">
                 <thead>
                     <th>Producto</th>
-                    <!--encabezado de tabla-->
                     <th>Precio</th>
                     <th>Cantidad</th>
                     <th>Opciones</th>
                 </thead>
                 <tbody id="lista-prod-compra">
-
                 </tbody>
-
             </table>
 
             <h2 class="color-fuente"> Carrito de compras</h2>
             <table class="tabla-prod tabla-carrito">
                 <thead>
                     <th>Producto</th>
-                    <!--encabezado de tabla-->
                     <th>Precio</th>
                     <th>Opciones</th>
                 </thead>
                 <tbody id="lista-prod-agregado-carrito">
 
                 </tbody>
-
             </table>
         </div>
     </div>
-
-    <!--<h2>Carrito de compras</h2>
-    <div class="container-tabla">
-        <table class="tabla-prod">
-            <thead>
-                <tr>
-                    <td>PRODUCTOS</td>
-                    <td>CANTIDAD</td>
-                    <td>PRECIO</td>
-                    <td>TOTAL</td>
-                    <td>AÑADIR AL CARRITO</td>
-                    <td>ELIMINAR</td>
-                </tr>
-            </thead>  
-            <tr>
-                <td><img src="images/dormitorio.jpeg" alt="dormitorio" class="img-prod-tabla"></td>
-                <td> <select name="cant" id="cant">
-                        <option value="1">1</option>
-                        <option value="1">2</option>
-                        <option value="1">3</option>
-                        <option value="1">4</option>
-                        <option value="1">5</option>
-                    </select>
-                </td>
-                <td>$00000</td>
-                <td>$00000</td>
-                <td>
-                    <button id="btn-comprar"<i class="fa-solid fa-bag-shopping"></i></button>
-                </td>
-                <td>
-                    <button id="btn-eliminar"<i class="fa-sharp fa-solid fa-trash"></i></button>
-                </td>
-            </tr>
-            <tr>
-                <td><img src="images/cortinas1.jpeg" alt="cortinas" class="img-prod-tabla"></td>
-                <td> <select name="cant" id="cant">
-                    <option value="1">1</option>
-                    <option value="1">2</option>
-                    <option value="1">3</option>
-                    <option value="1">4</option>
-                    <option value="1">5</option>
-                    </select>
-                </td>
-                <td>$00000</td>
-                <td>$00000</td>
-                <td>
-                    <button id="btn-comprar"<i class="fa-solid fa-bag-shopping"></i></button>
-                </td>
-                <td>
-                    <button id="btn-eliminar"<i class="fa-sharp fa-solid fa-trash"></i></button>
-                </td>
-            </tr> 
-            <tr>
-                <td><img src="images/muebles.jpeg" alt="muebles" class="img-prod-tabla"></td>
-                <td> <select name="cant" id="cant">
-                        <option value="1">1</option>
-                        <option value="1">2</option>
-                        <option value="1">3</option>
-                        <option value="1">4</option>
-                        <option value="1">5</option>
-                    </select>
-                </td>
-                <td>$00000</td>
-                <td>$00000</td>
-                <td>
-                    <button id="btn-comprar"<i class="fa-solid fa-bag-shopping"></i></button>
-                </td>
-                <td>
-                    <button id="btn-eliminar"<i class="fa-sharp fa-solid fa-trash"></i></button>
-                </td>
-            </tr>
-            <tr>
-                <td><img src="images/deco2.jpeg" alt="deco" class="img-prod-tabla"></td>
-                <td> <select name="cant" id="cant">
-                        <option value="1">1</option>
-                        <option value="1">2</option>
-                        <option value="1">3</option>
-                        <option value="1">4</option>
-                        <option value="1">5</option>
-                    </select>
-                </td>
-                <td>$00000</td>
-                <td>$00000</td>
-                <td>
-                    <button id="btn-comprar"<i class="fa-solid fa-bag-shopping"></i></button>
-                </td>
-                <td>
-                    <button id="btn-eliminar"<i class="fa-sharp fa-solid fa-trash"></i></button>
-                </td>
-            </tr>  
-                
-        </table>
-    </div>-->
-    
     <footer>
         <div class="container-redes-footer">
             <div class="contacto-footer">
