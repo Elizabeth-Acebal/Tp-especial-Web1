@@ -1,32 +1,81 @@
 "use strict"
+const BASE_API="https://64961c16b08e17c9179303d9.mockapi.io/api/clientes";
+
+let clientes=[
+    compra=[],
+];
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    //BOTON RESPONSIVE
-document.querySelector(".btn-menu").addEventListener("click", cambiarMenu);
+    let id;
 
 
-let btnAgregar=document.querySelectorAll(".btn-agregar");
-let tabla = document.querySelector(".tabla tbody");
-let tablaDom=document.querySelector(".tabla");
-let btnVaciar=document.querySelector("#btn-vaciar");
-btnVaciar.addEventListener("click",vaciar);
-let total=document.querySelector(".total");
-let cantidad=1;
+
+    async function obtenerDatos(){
+        try{
+            let res= await fetch(BASE_API);
+            let clientes= await res.json();
+            console.log(clientes);
+            tabla.innerHTML="";
+            for(const cliente of clientes){
+                id=cliente.id;
+                tabla.innerHTML += `
+                            <tr>+
+                                <td><img src='${cliente.producto.imagen}'></td>+
+                                <td> ${cliente.producto.nombre}</td>+
+                                <td> ${cliente.producto.precio}</td>+       
+                                <td><button class='btn-sumar'>+</button>${cliente.producto.cantidad} <button class='btn-restar'>-</button></td> +
+                                <td><button class='btn-delete'><i class='fas fa-trash'></i></button></td>" +     
+                            </tr>
+            `;
+            }
+        }catch(error){
+            console.log(error);
+        }
+    }
+        obtenerDatos();
+    //let btnAgregar=document.querySelectorAll(".btn-agregar");
+   /* let tabla = document.querySelector(".tabla tbody");
+    let tablaDom=document.querySelector(".tabla");
+    let btnVaciar=document.querySelector("#btn-vaciar");
+    btnVaciar.addEventListener("click",vaciar);
+    let total=document.querySelector(".total");
+    let cantidad=1;
 
 
- //menu responsive
-function cambiarMenu(){
-    document.querySelector(".menu").classList.toggle("cambio");
-}
+    async function agregar(event){
+        event.preventDefault();
 
-let compra=[];
+        tabla.innerHTML="<h1>loading...</h1>";
+            try{
+                let response=await fetch("http://127.0.0.1:5501/decoProd.html");
+                if(response.ok){
+                    let t=await response.text();
+                    container.innerHTML=t;
+                }
+            //le AGREGO LA FUNCION AL NUEVO BOTON.
+        
+                document.querySelector('.btn-sumar').addEventListener("click", function() {
+                    cantidad++;
+                    mostrar();// actualizar tabla y total
+                });
 
 
-for(let botonAgregar of btnAgregar){
-    botonAgregar.addEventListener("click", agregar);
-}
-    function agregar() {
+            }
+    
+            catch(error){
+                console.log(error);   
+                container.innerHTML="error";
+            }
+        }  
+    
+        let btnAgregar=document.querySelectorAll(".btn-agregar");
+        btnAgregar.forEach(e=>e.addEventListener("click",agregar));
+
+
+   /* function agregar() {
         tablaDom.classList.add("tabla-visible");
         tablaDom.classList.remove("tabla-oculta");
         btnVaciar.classList.add("tabla-visible");
@@ -86,7 +135,7 @@ for(let botonAgregar of btnAgregar){
     por lo que la asignación del evento click en los botones de eliminar debe realizarse cada vez que se agregue un producto al carrito. 
     Para solucionarlo, se puede mover el código que asigna el evento click de los botones de eliminar dentro de la función mostrar()
      después de crear las filas en la tabla: */
-                            let btnDelete=document.querySelectorAll(".btn-delete");
+                          /*  let btnDelete=document.querySelectorAll(".btn-delete");
                             for(let botonDelete of btnDelete){
                                 botonDelete.addEventListener("click", eliminarItem);
                             }
@@ -119,7 +168,7 @@ for(let botonAgregar of btnAgregar){
     */
     
     
-    function calcularTotal() {
+  /*  function calcularTotal() {
         let totalCompra=0;
         for (let producto of compra) {
             totalCompra += Number(producto.precio);
@@ -145,9 +194,9 @@ for(let botonAgregar of btnAgregar){
         compra=[];
         total.textContent = "";
         cantidad=1;
-    }
+    }*/
+    
 
     
-        
-    
+
 })

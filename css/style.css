@@ -16,7 +16,7 @@
 
 .destacado {
     background-color: rgb(253, 182, 182);
-  }
+}
 
 /*--------MENU-------*/
 .logo {
@@ -145,7 +145,6 @@ h2 {
 }
 
 .img-prod {
- 
     width: 70%;
     border-radius: 10px;
 }
@@ -167,8 +166,68 @@ button a{
     border: 2px solid #D4C26A;
     font-size: 100%;
     color: #D4C26A;
+    opacity: 0.8;
+}
+/*-----------prod del carrito-----------*/
+.padre, .container-prodDormitorio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    margin-left: 4%;
+}
+.container-prodDormitorio img{
+    height: 40%;
+    width: 100%;
+    
+}
+.container-prodDormitorio button{
+    background-color: #000000;
+    color: #d7e6f3;
+    padding: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.container-prodDormitorio p{
+    text-align: center;
+    margin-bottom: 2%;
 }
 
+.tabla img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.tabla-oculta{
+    visibility: hidden;
+}
+.tabla-visible{
+    visibility: visible;
+}
+thead{
+    color: #D4C26A;
+    
+}
+.btn-delete{
+    background-color: white;
+    border: solid 2px #D4C26A;
+    padding: 4%;
+
+}
+button i{
+    color: #D4C26A;
+    font-size: 15px;
+}
+#btn-vaciar{
+    background-color: white;
+    color: #D4C26A;
+    border: solid 2px #D4C26A;
+    padding: 1%;
+    margin: 2%;
+    border-radius: 5%;  
+}
+/*-----------prod del carrito-----------*/
 /*-----------TABLA DINAMIICA-----------*/
 
 .container-carga-prod.carrito {
@@ -277,7 +336,7 @@ tbody {
     border-spacing: 24px 20px;
 }
 
-
+/*-----------TABLA DINAMIICA-----------*/
 
 /*-----------FORMULARIO------------*/
 .container-form-titulo {
@@ -538,8 +597,8 @@ footer p {
         cursor: pointer;
         height: 35px;
         width: 150px;
-        right: 40%;
-        top: 50%;
+        right: 37%;
+        top: 40%;
     }
 
     /*--------------Banner---------------*/
