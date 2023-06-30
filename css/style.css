@@ -54,6 +54,7 @@ nav.menu {
     padding: 0px;
     display: none;
     flex-direction: column;
+
 }
 
 .item {
@@ -204,6 +205,12 @@ button a{
 }
 .tabla-visible{
     visibility: visible;
+    /*Agregrue*/
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 thead{
     color: #D4C26A;

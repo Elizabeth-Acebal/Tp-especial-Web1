@@ -1,5 +1,6 @@
 "use strict"
-const formulario = document.querySelector("#form");
+
+let formulario = document.querySelector("#form");
 
 let recargar = document.querySelector("#btn-recargar").addEventListener("click", crearCaptcha);
 let cerrarMensaje = document.querySelector("#btn-cerrar-mensaje").addEventListener("click", ocultarMensajes);;
@@ -28,12 +29,6 @@ function crearCaptcha() {
     }
     captchaAleatorio = captchaGenerado.join('');
     document.querySelector("#captcha").innerHTML = captchaAleatorio;
-}
-window.onload = function () {
-    let myInput = document.getElementById('captcha');
-    myInput.oncopy = function (e) {
-        e.preventDefault();
-    }
 }
 
 formulario.addEventListener("submit", function (event) {
@@ -72,8 +67,13 @@ formulario.addEventListener("submit", function (event) {
 }
 )
 
-crearCaptcha();
 
 function ocultarMensajes() {
     document.querySelector("#msj-form-enviado").classList.add('ocultar-mensaje-alerta');
+}
+
+crearCaptcha();
+let myInput = document.querySelector('#captcha');
+myInput.oncopy = function (e) {
+    e.preventDefault();
 }
