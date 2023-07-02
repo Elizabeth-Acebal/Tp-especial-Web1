@@ -22,14 +22,15 @@ document.addEventListener('DOMContentLoaded', function () {
                     response = await fetch(`${window.location.origin}/${id}.html`);
                     break;
             }
-
+             // si cargue el script de contacto lo elimino
+            let scriptToRemove = document.querySelector("#scripContacto");
+            if (scriptToRemove !== null) {
+                // Elimina el script si existe
+                document.head.removeChild(scriptToRemove);  
+            }
             if (response.ok) {
-                // si cargue el script de contacto lo elimino
-                let scriptToRemove = document.querySelector("#scripContacto");
-                if (scriptToRemove !== null) {
-                    // Elimina el script si existe
-                    scriptToRemove.parentNode.removeChild(scriptToRemove);
-                }
+               
+               
                 let content = await response.text();
                 contenido.innerHTML = content;
                 if (id === "productos") {//si el "id" esproductos, cargoCatalogo 
@@ -38,10 +39,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 // si es contacto tengo que carga el script
                 if (id === "contacto") {
                     let scriptElement = document.createElement('script');//creo el script para cargarlo a esa pagina
-                    scriptElement.src = 'js/script.js'; // Reemplaza con la ruta correcta de tu archivo script.js
+                    scriptElement.src = `${window.location.origin}/js/script.js`; // Reemplaza con la ruta correcta de tu archivo script.js
                     scriptElement.id = 'scripContacto'; // Asigna el ID que desees
                     // Agrega el script al final del cuerpo del documento
-                    document.body.appendChild(scriptElement);
+                    document.head.appendChild(scriptElement);
+          
                 }
                 switch (id) {
                     case 'btn-dormitorio':

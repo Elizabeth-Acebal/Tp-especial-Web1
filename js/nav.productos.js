@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+/*document.addEventListener('DOMContentLoaded', function () {
    
 
 
@@ -54,4 +54,4 @@ document.addEventListener('DOMContentLoaded', function () {
        // SelecTab(stateId); //selecciona estado anterior
         cargarContenido(stateId);//carga el estado anterior
     });
-});
+});*/
