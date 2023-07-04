@@ -155,10 +155,7 @@ button a{
     text-decoration: none;
 }
 
-#btn-dormitorio,
-#btn-cortinas,
-#btn-muebles,
-#btn-deco {
+.prod button{ /*CAMBIO*/
     width: 30%;
     position: absolute;
     top: 45%;
@@ -181,12 +178,12 @@ button a{
     width: 100%;
     
 }
-.container-prodDormitorio button{
+.container-prodDormitorio button, .btn-formAgregar{
     background-color: #000000;
     color: #d7e6f3;
     padding: 2%;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin-top: 1%;
+    
 }
 .container-prodDormitorio p{
     text-align: center;
@@ -197,6 +194,8 @@ button a{
     width: 60px;
     height: 60px;
     border-radius: 50%;
+    border: solid 2px #D4C26A;
+    margin-left: 10%;
 }
 
 .tabla-oculta{
@@ -207,8 +206,10 @@ button a{
 }
 thead{
     color: #D4C26A;
-    
+    font-size: 15px;   
 }
+
+
 .btn-delete{
     background-color: white;
     border: solid 2px #D4C26A;
@@ -219,13 +220,26 @@ button i{
     color: #D4C26A;
     font-size: 15px;
 }
-#btn-vaciar{
+#btn-vaciar, #btn-comprar{
     background-color: white;
     color: #D4C26A;
     border: solid 2px #D4C26A;
     padding: 1%;
     margin: 2%;
     border-radius: 5%;  
+}
+.destacadoMenor{
+    color: #D4C26A;
+    font-size: 15px;
+
+}
+.btn-sumar, .btn-restar{
+    border-radius: 50%;
+    background-color: white;
+    padding: 1%;
+    margin: 1%;
+    border: solid 1px #D4C26A;
+    color: #D4C26A;
 }
 /*-----------prod del carrito-----------*/
 /*-----------TABLA DINAMIICA-----------*/
@@ -382,6 +396,11 @@ form {
     font-size: 12px;
     width: 43%;
     padding: 1px;
+    
+}
+.recargar{ /*NUEVA CLASE PARA ACOMODAR TEXTO*/
+    text-align: center;
+    padding-left: 10%;
 }
 
 
@@ -583,17 +602,14 @@ footer p {
         border-radius: 10px;
         filter: drop-shadow(7px 9px 9px #D4C26A);
         transition: all 500ms ease;
-        padding-bottom: 12%;
+        padding-bottom: 5%;
     }
 
     .img-prod:hover {
         transform: scale(1.1);
     }
 
-    #btn-dormitorio,
-    #btn-cortinas,
-    #btn-muebles,
-    #btn-deco {
+    .prod button{
         cursor: pointer;
         height: 35px;
         width: 150px;
@@ -674,6 +690,9 @@ footer p {
     /*-------------form------------*/
     .formulario {
         width: 40%;
+    }
+    .recargar{ /*CAMBIO*/
+        padding-left: 75px;
     }
 
 
