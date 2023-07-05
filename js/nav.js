@@ -28,9 +28,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Elimina el script si existe
                 document.head.removeChild(scriptToRemove);
             }
+
+            // si cargue el script de contacto lo elimino
+            let scripTablaDinamicaToRemove = document.querySelector("#scripTablaDinamica");
+            if (scripTablaDinamicaToRemove !== null) {
+                // Elimina el script si existe
+                document.head.removeChild(scripTablaDinamicaToRemove);
+            }
             if (response.ok) {
-
-
                 let content = await response.text();
                 contenido.innerHTML = content;
                 if (id === "productos") {//si el "id" esproductos, cargoCatalogo 
@@ -43,7 +48,16 @@ document.addEventListener('DOMContentLoaded', function () {
                     scriptElement.id = 'scripContacto'; // Asigna el ID que desees
                     // Agrega el script al final del cuerpo del documento
                     document.head.appendChild(scriptElement);
-                   
+
+                }
+                // si es contacto tengo que carga el script
+                if (id === "btn-dormitorio" || id === "btn-cortinas" || id === "btn-muebles" || id === "btn-deco") {
+                    let scriptElement = document.createElement('script');//creo el script para cargarlo a esa pagina
+                    scriptElement.src = `${window.location.origin}/js/tablaDinamica.js`; // Reemplaza con la ruta correcta de tu archivo script.js
+                    scriptElement.id = 'scripTablaDinamica'; // Asigna el ID que desees
+                    // Agrega el script al final del cuerpo del documento
+                    document.head.appendChild(scriptElement);
+
                 }
                 switch (id) {
                     case 'btn-dormitorio':

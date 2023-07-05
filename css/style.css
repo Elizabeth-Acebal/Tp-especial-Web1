@@ -179,11 +179,17 @@ button a{
     width: 100%;
     
 }
+.container-prodDormitorio button:hover{
+    background-color: #ffffff;
+    color: black;
+}
 .container-prodDormitorio button, .btn-formAgregar{
     background-color: #000000;
     color: #d7e6f3;
     padding: 2%;
     margin-top: 1%;
+    cursor: pointer
+    
     
 }
 .container-prodDormitorio p{
@@ -194,7 +200,7 @@ button a{
 .tabla img{
     width: 60px;
     height: 60px;
-    border-radius: 50%;
+    border-radius: 34%;
     border: solid 2px #D4C26A;
     margin-left: 10%;
 }
@@ -204,11 +210,12 @@ button a{
 }
 .tabla-visible{
     visibility: visible;
-    /*Agregrue*/
-    background-color: cadetblue;
+    /*agregre*/
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: inherit;
+    border: 1px solid #D4C26A;
+    padding: 10px;
     gap: 10px;
 }
 thead{
@@ -229,6 +236,7 @@ button i{
 }
 #btn-vaciar, #btn-comprar{
     background-color: white;
+    cursor: pointer;
     color: #D4C26A;
     border: solid 2px #D4C26A;
     padding: 1%;
@@ -241,12 +249,13 @@ button i{
 
 }
 .btn-sumar, .btn-restar{
-    border-radius: 50%;
+    width: 30px;
     background-color: white;
     padding: 1%;
     margin: 1%;
     border: solid 1px #D4C26A;
-    color: #D4C26A;
+    /* color: #D4C26A; */
+    cursor: pointer;
 }
 /*-----------prod del carrito-----------*/
 /*-----------TABLA DINAMIICA-----------*/
@@ -287,6 +296,12 @@ button i{
 .container-carga-prod {
     display: flex;
     flex-direction: column;
+}
+
+.container-formCompra{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container-carga-prod input {
@@ -356,6 +371,28 @@ tbody {
 tbody {
     border-spacing: 24px 20px;
 }
+/*tabla dinamica estilos td*/
+
+.botones-vaciar-comprar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+tr{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+    align-items: center;
+}
+
+td{
+    display: flex;
+    gap: 10px;
+    color: #000000;
+
+}
 
 /*-----------TABLA DINAMIICA-----------*/
 
@@ -414,7 +451,7 @@ form {
 .input-sumbit {
     background-color: #000;
     border: none;
-    border-radius: 27px;
+    /*border-radius: 27px;*/
     color: white;
     cursor: pointer;
     font-size: 16px;
@@ -692,6 +729,10 @@ footer p {
     }
     .btn-eliminar, .agregar-prod {
         font-size: 16px;
+    }
+
+    .botones-vaciar-comprar{
+        justify-content: end;
     }
 
     /*-------------form------------*/

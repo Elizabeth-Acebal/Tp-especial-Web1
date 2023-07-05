@@ -1,25 +1,25 @@
-"use strict"
 
-document.addEventListener('DOMContentLoaded', function () {
 
-    let btnAgregar=document.querySelectorAll(".btn-agregar");
-    let tabla = document.querySelector(".tabla tbody");
-    let tablaDom=document.querySelector(".tabla");
-    let btnVaciar=document.querySelector("#btn-vaciar");
+    var btnAgregar=document.querySelectorAll(".btn-agregar");
+    var tabla = document.querySelector(".tabla tbody");
+    var tablaDom=document.querySelector(".tabla");
+    var btnVaciar=document.querySelector("#btn-vaciar");
     btnVaciar.addEventListener("click",vaciar);
-    let btncomprar=document.querySelector("#btn-comprar");
+    var btncomprar=document.querySelector("#btn-comprar");
     btncomprar.addEventListener("click",comprar);
-    let btnAgregarx3=document.querySelectorAll(".btn-agregarx3");
-    let total=document.querySelector(".total");
-    let formCompra=document.querySelector(".container-formCompra");
+    var btnAgregarx3=document.querySelectorAll(".btn-agregarx3");
+    var total=document.querySelector(".total");
+    var formCompra=document.querySelector(".container-formCompra");
 
-    let compra=[ ];
+    var compra=[ ];
     
 
-    for(let botonAgregar of btnAgregar){
+    for(var botonAgregar of btnAgregar){
         botonAgregar.addEventListener("click", agregar);
     }
-    function agregar() { 
+
+
+    function agregarAlcarrito( contenedor, cantidad){
         tablaDom.classList.add("tabla-visible");
         tablaDom.classList.remove("tabla-oculta");
         btnVaciar.classList.add("tabla-visible");
@@ -30,16 +30,17 @@ document.addEventListener('DOMContentLoaded', function () {
        /* let imagen = this.parentNode.querySelector("#img-prod-carrito").src;
         let nombre = this.parentNode.querySelector("#nombre-prod").dataset.nombre;
         let precio = Number(this.parentNode.querySelector("#precio-prod").dataset.precio);*/
-        let contenedor = this.closest(".container-prodDormitorio");
+       
         let imagen = contenedor.querySelector("#img-prod-carrito").src;
         let nombre = contenedor.querySelector("#nombre-prod").dataset.nombre;
         let precio = Number(contenedor.querySelector("#precio-prod").dataset.precio);
-        let cantidad=1;
+       // let cantidad=1;
+       precio = precio * cantidad;
         let productoExiste = false;
         for(let i = 0; i < compra.length; i++){
             if(compra[i].nombre===nombre ){
                 productoExiste = true;
-                compra[i].cantidad++; 
+                compra[i].cantidad = compra[i].cantidad + cantidad; 
                 
             }
         }
@@ -59,17 +60,19 @@ document.addEventListener('DOMContentLoaded', function () {
         
 
     }
+    function agregarTres() { 
+        var contenedor = this.closest(".container-prodDormitorio");
+        agregarAlcarrito(contenedor, 3)
+    }
+    function agregar(){
+        var contenedor = this.closest(".container-prodDormitorio");
+        agregarAlcarrito(contenedor, 1)
+    }
     //ver PORQUE NO ANDA
     for(let botonAgregar3 of btnAgregarx3){
-        botonAgregar3.addEventListener("click", agregarX3);
+        botonAgregar3.addEventListener("click", agregarTres);
     }
-    function agregarX3() {
-    
-        for (let i = 0; i < 3; i++) {
-            agregar();
-        }
-
-    }
+   
     //REDUCIR CODIGO
 
     function mostrar() {
@@ -82,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                         "<td><img src='" + compra[i].imagen + "'></td>"+
                                         "<td>" + compra[i].nombre + "</td>"+
                                         "<td>" + "$"+compra[i].precio + "</td>"+       
-                                        "<td><button class='btn-sumar'>+</button>"+compra[i].cantidad+ "<button class='btn-restar'>-</button></td>" +
+                                        "<td><button class='btn-sumar'>+</button><span>"+compra[i].cantidad+ "</span><button class='btn-restar'>-</button></td>" +
                                         "<td><button class='btn-delete'><i class='fas fa-trash'></i></button></td>" +     
                                     "</tr>"
             }else{
@@ -90,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     "<td><img src='" + compra[i].imagen + "'></td>"+
                     "<td>" + compra[i].nombre + "</td>"+
                     "<td>" + "$"+compra[i].precio + "</td>"+       
-                    "<td><button class='btn-sumar'>+</button>"+compra[i].cantidad+ "<button class='btn-restar'>-</button></td>" +
+                    "<td><button class='btn-sumar'>+</button><span>"+compra[i].cantidad+ "</span><button class='btn-restar'>-</button></td>" +
                     "<td><button class='btn-delete'><i class='fas fa-trash'></i></button></td>" +     
                 "</tr>"
             }
@@ -199,5 +202,3 @@ document.addEventListener('DOMContentLoaded', function () {
         
     }
         
-    
-})
