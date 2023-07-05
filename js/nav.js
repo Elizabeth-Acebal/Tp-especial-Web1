@@ -22,15 +22,15 @@ document.addEventListener('DOMContentLoaded', function () {
                     response = await fetch(`${window.location.origin}/${id}.html`);
                     break;
             }
-             // si cargue el script de contacto lo elimino
+            // si cargue el script de contacto lo elimino
             let scriptToRemove = document.querySelector("#scripContacto");
             if (scriptToRemove !== null) {
                 // Elimina el script si existe
-                document.head.removeChild(scriptToRemove);  
+                document.head.removeChild(scriptToRemove);
             }
             if (response.ok) {
-               
-               
+
+
                 let content = await response.text();
                 contenido.innerHTML = content;
                 if (id === "productos") {//si el "id" esproductos, cargoCatalogo 
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     scriptElement.id = 'scripContacto'; // Asigna el ID que desees
                     // Agrega el script al final del cuerpo del documento
                     document.head.appendChild(scriptElement);
-          
+                   
                 }
                 switch (id) {
                     case 'btn-dormitorio':

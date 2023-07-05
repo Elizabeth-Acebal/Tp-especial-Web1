@@ -80,4 +80,6 @@ function inicilizarScript() {
 
 }
 
-inicilizarScript(captcha);
+
+inicilizarScript();
+
