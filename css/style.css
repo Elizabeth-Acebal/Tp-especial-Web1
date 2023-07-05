@@ -239,17 +239,18 @@ button i{
     color: #D4C26A;
 }
 .tabla , .tabla-clientes{
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
     border-collapse: collapse;
     
 }
+  
 
 .tabla th, .tabla-clientes th,
 .tabla td, .tabla-clientes td {
     padding: 8px;
     text-align: center;
     border: 1px solid #D4C26A;
+   
 }
 
 p.total{
