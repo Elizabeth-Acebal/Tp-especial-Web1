@@ -121,6 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             totalCompra += Number(compra.productos[i].precio) * Number(compra.productos[i].cantidad);
             total.textContent = "TOTAL: $" + totalCompra;
+
         }
     }
 
@@ -145,8 +146,8 @@ document.addEventListener("DOMContentLoaded", function () {
         btnVaciar.classList.add("tabla-oculta");
         btnComprar.classList.remove("tabla-visible");
         btnComprar.classList.add("tabla-oculta");
-        tablaClientesDom.classList.remove("tabla-visible");
-        tablaClientesDom.classList.add("tabla-oculta");
+        //tablaClientesDom.classList.remove("tabla-visible");
+        //tablaClientesDom.classList.add("tabla-oculta");
     }
 
     let clienteAgregado = false;
@@ -213,7 +214,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }  
 
             formCliente.classList.add("tabla-oculta");
-            //vaciar();
+            vaciar();
             textoCompra.innerHTML += `<p>GRACIAS POR SU COMPRA!!!</p>` +
                                         `<p> Nos contactaremos al teléfono ingresado para continuar con la misma.</p>`;
 
