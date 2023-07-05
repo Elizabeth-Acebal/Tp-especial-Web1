@@ -10,6 +10,4 @@ document.addEventListener('DOMContentLoaded', function () {
     function cambiarMenu() {
         document.querySelector(".menu").classList.toggle("cambio");
     }
-
-
 })
